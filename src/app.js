@@ -10,7 +10,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 require('./database/mongodb-init')();
-
 app.post('/records', validator, getRecords)
 
 module.exports = app;
