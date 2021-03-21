@@ -28,11 +28,9 @@ exports.getRecords = (req, res) => {
                 return success(res, result);
             })
             .catch((err) => {
-                console.error(err);
                 return serverError(res, err);
             });
     } catch (err) {
-        console.error(err);
         return serverError(res, err);
     }
 }

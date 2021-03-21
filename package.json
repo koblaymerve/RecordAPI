@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "test": "jest --config=./src/jest.config.js --detectOpenHandles --runInBand --forceExit"
+    "test": "jest --coverage --config=./src/jest.config.js --detectOpenHandles --runInBand --forceExit"
   },
   "jest": {
     "collectCoverage": true,

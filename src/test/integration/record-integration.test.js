@@ -19,4 +19,21 @@ describe('Get Records', () => {
         done();
 
     });
+
+    it('should get error', async (done) => {
+        const res = await supertest(app)
+            .post('/records')
+            .send({
+                startDate: "2015/01-26",
+                endDate: "2015-02-02",
+                minCount: 309,
+                maxCount: 500
+            })
+            .expect(400);
+
+        expect(res.body).toHaveProperty('code')
+        expect(res.body.code).toEqual(1)
+        done();
+
+    });
 })
